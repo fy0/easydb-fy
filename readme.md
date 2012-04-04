@@ -1,4 +1,10 @@
-# EasyDB
+# EasyDB [fy fork]
+
+==Warning:
+This fork changed something simple but special,i am not sure the original author approve the way my program behave.
+So i changed setup info.
+
+==Content:
 
 A really simple **SQLite wrapper** that saves you from having to worry about creating tables or managing connections.
 
@@ -33,3 +39,4 @@ for result in db.query("SELECT * FROM users"):
     print result
 # => ('ben', 'some sort of description')
 ```
+

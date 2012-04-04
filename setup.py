@@ -5,8 +5,8 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name='easydb',
-    version='0.1',
+    name='easydb-fy',
+    version='0.1.1',
     description='Simple SQLite wrapper to make it easier to manage your database',
     author='Ben Dowling',
     author_email='ben.m.dowling@gmail.com',
