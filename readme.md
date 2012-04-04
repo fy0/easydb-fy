@@ -1,10 +1,10 @@
 # EasyDB [fy fork]
 
-==Warning:
+## Warning:
 This fork changed something simple but special,i am not sure the original author approve the way my program behave.
 So i changed setup info.
 
-==Content:
+## Content:
 
 A really simple **SQLite wrapper** that saves you from having to worry about creating tables or managing connections.
 
