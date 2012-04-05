@@ -2,9 +2,7 @@
 
 Warning:Incompatible with orgin project.
 
-## Content:
-
-### EasyDB
+## EasyDB
 
 A really simple **SQLite wrapper**.
 
@@ -42,7 +40,7 @@ print db.query("SELECT * FROM users")
 # => (u'ben', u'123')
 ```
 
-### kvDB
+## kvDB
 
 **Warning:Poor English**
 A simple Key-Value style sqlite wrapper.
