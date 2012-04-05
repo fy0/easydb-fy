@@ -49,7 +49,7 @@ A simple Key-Value style sqlite wrapper.
 Here is a example:
 
 ```python
-from easydb import EasyDB
+from easydb import kvDB
 db = kvDB('test.db')
 
 db['test'] = '123456'
@@ -62,7 +62,7 @@ print db['test']
 Something more interesting:
 
 ```python
-from easydb import EasyDB
+from easydb import kvDB
 db = kvDB('test.db')
 
 db['test'] = '123','456'
