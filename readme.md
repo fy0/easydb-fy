@@ -1,7 +1,6 @@
 # EasyDB [fy fork]
 
-## Warning:
-Incompatible with orgin project.
+Warning:Incompatible with orgin project.
 
 ## Content:
 
