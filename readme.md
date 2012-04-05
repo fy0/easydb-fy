@@ -1,14 +1,15 @@
 # EasyDB [fy fork]
 
 ## Warning:
-This fork changed something simple but special,i am not sure the original author approve the way my program behave.
-So i changed setup info.
+Incompatible with orgin project.
 
 ## Content:
 
-A really simple **SQLite wrapper** that saves you from having to worry about creating tables or managing connections.
+### EasyDB
 
-It can be used on existing SQLite database by simply passing in the database filename:
+A really simple **SQLite wrapper**.
+
+It can be used on existing SQLite database:
 
 ```python
 from easydb import EasyDB
@@ -20,23 +21,56 @@ New databases can be creating by specifying your schema as a dictionary, eg:
 
 ```python
 schema = {
-    'table_name': ['column_name column_type', …],
-    'table_name': ['column_name column_type', …],
-    'table_name': ['column_name column_type', …]
+    'table_name': ['column_name column_type', ...],
+    'table_name': ['column_name column_type', ...],
 }
 db = EasyDB('filename.db', schema)
 ```
 
-If the database file already exists then the schema won't be updated, but if it doesn't exist then it'll be created with the given schema. Here's a full example:
+**If the database file already exists then the schema won't be updated, but if it doesn't exist then it'll be created with the given schema.**
+
+A example:
 
 ```python
 from easydb import EasyDB
-db = EasyDb('my.db', {'users': ['username text', 'description text']})
+db = EasyDB('my.db', {'users': ['name text', 'pw text']})
 
-db.query("INSERT INTO users (username, description) VALUES (?, ?)", ('ben', 'some sort of description'))
+db.query("insert into users values('%s','%s')" % ('ben','123'))
+# or: db.query("INSERT INTO users (name, pw) VALUES (?, ?)", ('ben', '123'))
 
-for result in db.query("SELECT * FROM users"):
-    print result
-# => ('ben', 'some sort of description')
+print db.query("SELECT * FROM users")
+
+# => (u'ben', u'123')
+```
+
+### kvDB
+
+**Warning:Poor English**
+A simple Key-Value style sqlite wrapper.
+
+Here is a example:
+
+```python
+from easydb import EasyDB
+db = kvDB('test.db')
+
+db['test'] = '123456'
+
+print db['test']
+
+# => 123456
+```
+
+Something more interesting:
+
+```python
+from easydb import EasyDB
+db = kvDB('test.db')
+
+db['test'] = '123','456'
+
+print db['test']
+
+# => ('123', '456')
 ```
 
