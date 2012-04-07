@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name='easydb-fy',
-    version='0.1.1',
+    version='0.1.2',
     description='Simple SQLite wrapper, and a small key-value db implement',
     author='fy',
     author_email='fy0748@gmail.com',
